@@ -1,8 +1,15 @@
 import tkinter as tk
 from tkinter import *
+def master_key(coursecode,examtype):
 
+    
+    final1="".join(chr(ord(i)+5) for i in coursecode)
+    final2="".join(chr(ord(i)+5) for i in examtype)
+    
+    return final1+final2
 def Exam_ends():
-    Master_key = Label(frame,width=20,text=final1+final2)
+    
+    Master_key = Label(frame,width=20,text=master_key(Course_code.get(),Exam_type.get()))
     Master_key.place(x=200,y=60)
 #App
 root=tk.Tk()
@@ -25,8 +32,7 @@ Exam_type.place(x=200,y=40)
 Exam_type_tag= Label(frame,bg="cyan",text="Examination")
 Exam_type_tag.place(x=40,y=40)
 
-final1="".join(chr(ord(i)+5) for i in Course_code.get())
-final2="".join(chr(ord(i)+5) for i in Exam_type.get())
+
 
 
 
