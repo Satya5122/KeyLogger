@@ -94,7 +94,7 @@ def Exam_ends():
     pdf = canvas.Canvas(fileName)
     pdf.setTitle(documentTitle)
     # ###################################
-    # Register a new font
+    # 1)Register a new font
     from reportlab.pdfbase.ttfonts import TTFont
     from reportlab.pdfbase import pdfmetrics
 
@@ -104,10 +104,10 @@ def Exam_ends():
     )
     pdf.setFont('abc', 36)
     pdf.drawCentredString(300, 770, title)
-    # 3) Draw a line
+    # 2) Draw a line
     pdf.line(30, 710, 550, 710)
     # ###################################
-    # 4) Text object :: for large amounts of text
+    # 3) Text object :: for large amounts of text
     from reportlab.lib import colors
 
     text = pdf.beginText(40, 680)
